@@ -6,10 +6,10 @@ const font = Inter({
   subsets: ["latin"]
 });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = {  
+  icons: "./logo.svg",
   title: "Seu evento começa aqui",
-  description: "Aplicação Fullstack de eventos.",
-  icons: "./logo.svg"
+  description: "Aplicação Fullstack de eventos."
 };
 
 export default function RootLayout({
