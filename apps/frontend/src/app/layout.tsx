@@ -9,6 +9,7 @@ const font = Inter({
 export const metadata: Metadata = {
   title: "Seu evento começa aqui",
   description: "Aplicação Fullstack de eventos.",
+  icons: "./logo.svg"
 };
 
 export default function RootLayout({
