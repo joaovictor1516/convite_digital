@@ -8,7 +8,7 @@ export interface PageTemplateProps{
 
 export function PageTemplate(props: Readonly<PageTemplateProps>){
     return (
-        <div className="flex flex-col items-center py-10 min-h-screen bg-[url('/background.png')] bg-cover bg-center">
+        <div className="flex flex-col items-center py-10 min-h-screen bg-[url('/background.png')] bg-cover bg-center containerTemplate">
             <header>
                 <LogoTemplate/>
             </header>
