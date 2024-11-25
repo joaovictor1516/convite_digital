@@ -27,5 +27,9 @@ export function checkEventInformations(event: EventProps): string[]{
         errorMessages.push("A descrição é obrigatória.");
     }
 
+    if(event.publicExpected <= 0){
+        errorMessages.push("O número de público esperado é obrigatório eprecisa ser maior que 0.");
+    }
+
     return errorMessages;
 }
