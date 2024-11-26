@@ -5,6 +5,9 @@ export function createEmptyGuest(): Partial<GuestProps>{
         id: GenerateId.new(),
         name: "",
         email: "",
-        telephoneNumber: ""
+        telephoneNumber: "",
+        isConfirmed: false,
+        hasCompanion: false,
+        amountInvitesMade: null
     };
 }
