@@ -1,15 +1,21 @@
-import { PageTemplate } from "@/components/template/PageTemplate";
-import { GenerateId } from "@/core";
-import { EventProps } from "@/core";
+import { LogoInitialPage } from "@/components/template/logoInitialPage";
+import Link from "next/link";
 
 export default function Home() {
-  const id = GenerateId.new();
 
-  const event: Partial<EventProps> =  {id: id};
-  console.log(event)
   return (
-    <PageTemplate>
-      <div></div>
-    </PageTemplate>
+    <div className="h-screen flex flex-col justify-center items-center gap-10 bg-[url('/background-initial-screen.svg')] bg-cover ">
+      <div className="flex flex-col items-center gap-4">
+        <LogoInitialPage/>
+
+        <p className="text-zinc-500 font-light w-96 leading-6 text-center select-none">
+          Crie e gerencie o convite do seu evento de forma rápida e fácil!  
+        </p>     
+      </div>
+
+      <Link href="./evento" className="button blue text-lg uppercase">
+        Crie o seu evento
+      </Link>
+    </div>
   );
 }
