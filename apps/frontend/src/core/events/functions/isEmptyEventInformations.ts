@@ -1,6 +1,6 @@
 import { EventProps } from "@/core";
 
-export function checkEventInformations(event: EventProps): string[]{
+export function checkEventInformations(event: Partial<EventProps>): string[]{
     const errorMessages: string[] = [];
     
     if(event.title === ""){

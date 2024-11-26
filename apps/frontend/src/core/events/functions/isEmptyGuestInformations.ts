@@ -1,6 +1,6 @@
 import { GuestProps } from "@/core";
 
-export function checkGuestInformations(guest: GuestProps): string[]{
+export function checkGuestInformations(guest: Partial<GuestProps>): string[]{
     const errorMessages: string[] = [];
     
     if(guest.name === ""){
