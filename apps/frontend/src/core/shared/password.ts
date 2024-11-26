@@ -1,5 +1,5 @@
 export class Password{
-    static creat(length: number = 8): string{
+    static new(length: number = 8): string{
         const lowerCasesalphabet = "abcdefghijklmnopqrstuvwxyz";
         const upperCasesAlphabet = lowerCasesalphabet.toUpperCase;
         const numbers = "0123456789";

@@ -10,7 +10,7 @@ export function complementaryEvent(eventPartial:Partial<EventProps>): EventProps
     const event: EventProps = {
         ...eventPartial,
         id: eventPartial.id ?? GenerateId.new(),
-        password: eventPartial.password ?? Password.creat(),
+        password: eventPartial.password ?? Password.new(),
         publicExpected: + (eventPartial.publicExpected ?? 1)
     } as EventProps;
 
