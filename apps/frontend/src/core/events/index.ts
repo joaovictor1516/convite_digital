@@ -1,5 +1,5 @@
 import { GuestProps } from "./model/guests";
 import { EventProps } from "./model/events";
-import { checkEventInformations, checkGuestInformations } from "./functions";
+import { checkEventInformations, checkGuestInformations, complementaryEvent } from "./functions";
 
-export {type GuestProps, type EventProps, checkEventInformations, checkGuestInformations};
+export {type GuestProps, type EventProps, checkEventInformations, checkGuestInformations, complementaryEvent};
