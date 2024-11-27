@@ -16,7 +16,7 @@ export function complementaryGuest(guestPartial: Partial<GuestProps>): GuestProp
         id: guestPartial.id ?? GenerateId.new(),
         isConfirmed: hasCompanion ?? false,
         hasCompanion: hasCompanion ?? false,
-        amountInvitesMade: hasCompanion ? guestPartial.amountInvitesMade : null
+        amountInvitesMade: hasCompanion ? guestPartial.amountInvitesMade : 0
     } as GuestProps;
 
     return guest;

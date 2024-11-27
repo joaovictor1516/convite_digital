@@ -5,5 +5,5 @@ export interface GuestProps{
     email: string;
     isConfirmed: boolean;
     hasCompanion: boolean;
-    amountInvitesMade: number | null;
+    amountInvitesMade: number;
 }

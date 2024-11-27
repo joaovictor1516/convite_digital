@@ -7,10 +7,6 @@ export function checkGuestInformations(guest: Partial<GuestProps>): string[]{
         errorMessages.push("Adicione o nome do/a convidado/a.");
     }
 
-    if(guest.telephoneNumber === ""){
-        errorMessages.push("Adicione o número de telefone do/a convidado/a.");
-    }
-
     if(guest.email === ""){
         errorMessages.push("Adicione o e-mail do/a convidado/a.");
     }
