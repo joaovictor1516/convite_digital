@@ -1,6 +1,6 @@
 export class GenerateId{
     static new(){
-        return `${this.hash()} - ${this.hash()} - ${this.hash()}`;
+        return `${this.hash()}-${this.hash()}-${this.hash()}`;
     }
 
     private static hash(){
