@@ -1,37 +1,40 @@
 "use client";
-import Image from "next/image";
-import { EventProps, events } from "@/core";
+import { EventProps, events, GuestProps } from "@/core";
 import { use, useEffect, useState } from "react";
+import { DashboardEvent } from "@/components/event/dashboardEvent";
+import { FormPasswordEvent } from "@/components/event/formPasswordEvent";
 
-export interface AdminEventPageType{
+export interface AdminEventPageProps{
     params: {
         todos: [id: string, password: string]
     }
 }
 
-export default function AdminEventPage(props: any){
-    const parameters: any = use(props.params);
+export default function AdminEventPage(props: AdminEventPageProps){
+    const parameters: AdminEventPageProps = use(props.params);
     const id: string = parameters.todos[0];
     const [event, setEvent] = useState<EventProps | null>(null);
     const [password, setPassword] = useState<string | null>(parameters.todos[1] ?? null);
 
+    const presents = event?.guests.filter((guest) => guest.isConfirmed) ?? [];
+    const absent = event?.guests.filter((guest) => !guest.isConfirmed) ?? [];
+
+    const totalGeneral = event?.guests.reduce((total: number, guest: GuestProps) => {
+        return total + guest.amountInvitesMade + 1
+    }, 0)
+
     function loadEvent(){
-        const event = events.find((ev) => ev.id === id && ev.password);
-        console.log(events);
+        const event = events.find((ev) => ev.id === id && ev.password === password);
         setEvent(event ?? null);
     }
 
     useEffect(() => {
         loadEvent();
-        console.log(id);
-        console.log(event)
-    }, [id]);
+    }, [id, password]);
 
-    return event ? (
-        <div className="flex flex-col">
-            <Image src={event.imageMain} alt={event.title} width={400} height={400}/>
-            <span>{event.title}</span>
-            <p>{event.description}</p>
+    return (
+        <div className="flex flex-col justify-center items-center">
+            {event ? <DashboardEvent event={event}/> : <FormPasswordEvent/>}
         </div>
-    ) : null
+    )
 }
