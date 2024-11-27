@@ -10,8 +10,8 @@ export const events: EventProps[] = [
       description: "An event to discuss the latest trends in technology.",
       localisation: "New York, NY",
       date: new Date("2024-12-15T09:00:00.000Z"),
-      imageBackground: "https://example.com/images/background-tech.jpg",
-      imageMain: "https://example.com/images/main-tech.jpg",
+      imageBackground: "https://play-lh.googleusercontent.com/mpBm6uxkAwCTaDL7us2iG0L-Lpxb6_vUYxJ5dBMSrKFGZoION2lUY5RkJYModzngyIk",
+      imageMain: "https://images.prismic.io/vaultinum/0458a9f1-e149-4037-b9aa-aa4b4fb53c25_propriete-intellectuelle-code-source-protection-compressed.jpg?auto=compress,format&rect=0,0,2400,981&w=2400&h=981",
       publicExpected: 500,
       guests: [
         {
@@ -40,8 +40,8 @@ export const events: EventProps[] = [
       description: "A day filled with live music and performances.",
       localisation: "Los Angeles, CA",
       date: new Date("2024-12-22T14:00:00.000Z"),
-      imageBackground: "https://example.com/images/background-music.jpg",
-      imageMain: "https://example.com/images/main-music.jpg",
+      imageBackground: "https://blog.cronapp.io/wp-content/uploads/2020/09/javascript-1.jpg",
+      imageMain: "https://www.datocms-assets.com/48401/1628644950-javascript.png?auto=format&fit=max&w=1200",
       publicExpected: 2000,
       guests: [
         {
