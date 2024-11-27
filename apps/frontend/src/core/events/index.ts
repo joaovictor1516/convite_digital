@@ -11,5 +11,4 @@ export {
     complementaryGuest,
     createEmptyEvent,
     createEmptyGuest
-
 };
