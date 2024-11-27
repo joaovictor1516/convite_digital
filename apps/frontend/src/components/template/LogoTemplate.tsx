@@ -9,7 +9,7 @@ const font = Righteous({
 
 export function LogoTemplate(){
     return(
-        <Link href="/" className={`${font.className} flex gap-x-1.5 items-center`}>
+        <Link href="/" className={`${font.className} flex gap-2 items-center`}>
             <Image src="/logo.svg" alt="Logo" width={50} height={50}/>
             <div className="flex flex-col items-center leading-5 text-lg">
                 <span>CONVIT<span className="text-blue-500">3</span></span>
