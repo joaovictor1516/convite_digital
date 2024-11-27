@@ -17,7 +17,6 @@ export const events: EventProps[] = [
         {
           id: GenerateId.new(),
           name: "John Doe",
-          telephoneNumber: "+1 555-123-4567",
           email: "johndoe@example.com",
           isConfirmed: true,
           hasCompanion: false,
@@ -26,7 +25,6 @@ export const events: EventProps[] = [
         {
           id: GenerateId.new(),
           name: "Jane Smith",
-          telephoneNumber: "+1 555-987-6543",
           email: "janesmith@example.com",
           isConfirmed: false,
           hasCompanion: true,
@@ -49,7 +47,6 @@ export const events: EventProps[] = [
         {
           id: GenerateId.new(),
           name: "Alice Cooper",
-          telephoneNumber: "+1 555-555-5555",
           email: "alicecooper@example.com",
           isConfirmed: true,
           hasCompanion: true,
@@ -58,7 +55,6 @@ export const events: EventProps[] = [
         {
           id: GenerateId.new(),
           name: "Bob Marley",
-          telephoneNumber: "+1 555-444-3333",
           email: "bobmarley@example.com",
           isConfirmed: false,
           hasCompanion: false,
