@@ -10,13 +10,15 @@ export default function Eventos(){
                 
                 <div key={event.id} className="flex flex-col justify-center w-full bg-zinc-500 rounded-lg overflow-hidden">
 
-                    <div className="relative w-full h-44">
+                    <div className="relative w-full h-52">
                         <Image src={event.imageMain} alt={event.title} fill className="object-cover"/>
                     </div>
 
-                    <div className="flex-1 flex flex-col p-7 gap-5 items-center">
-                        <span className="text-xl text-zinc-950 font-bold">{event.title}</span>
-                        <p className="text-zinc-800 font-semibold">{event.description}</p>
+                    <div className="flex-1 flex flex-col p-7 gap-5 items-center text-center">
+                        <div className="">
+                            <span className="text-xl text-zinc-950 font-bold">{event.title}</span>
+                            <p className="text-zinc-800 font-semibold">{event.description}</p>
+                        </div>
 
                         <QRCode
                             value={JSON.stringify({
