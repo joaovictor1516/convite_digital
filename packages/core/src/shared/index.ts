@@ -1,6 +1,6 @@
-import { UniqueHumanReadableIdentifier } from "./uniqueHumanReadableIdentifier";
+import { alias } from "./alias";
 import { Password } from "./password";
 import { DateEvent } from "./date";
 import { GenerateId } from "./id";
 
-export { GenerateId, UniqueHumanReadableIdentifier, Password, DateEvent };
+export { GenerateId, alias, Password, DateEvent };

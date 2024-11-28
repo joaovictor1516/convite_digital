@@ -13,7 +13,7 @@ export function EventInformations(props: Readonly<EventInformationsProps>) {
     <div className={`flex flex-col gap-2 ${props.className ?? ""}`}>
       <div className="flex-1 flex items-center gap-4 px-6 py-3 border border-zinc-800 rounded-lg">
         <span className="text-2xl font-black">
-          {event.uniqueHumanReadableIdentifier}:
+          {event.alias}:
         </span>
         <span className="text-xl text-zinc-300">{event.title}</span>
       </div>

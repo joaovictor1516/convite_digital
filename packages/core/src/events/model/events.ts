@@ -2,7 +2,7 @@ import { GuestProps } from "./guests";
 
 export interface EventProps {
   id: string;
-  uniqueHumanReadableIdentifier: string;
+  alias: string;
   password: string;
   title: string;
   description: string;

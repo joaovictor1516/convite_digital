@@ -3,7 +3,7 @@ import { EventProps } from "../events";
 export const events: EventProps[] = [
   {
     id: "hu9axkpth5c-jaqh97nmmt-k7g6tszaum",
-    uniqueHumanReadableIdentifier: "event-001",
+    alias: "event-001",
     password: "securePassword123",
     title: "Tech Conference 2024",
     description: "An event to discuss the latest trends in technology.",
@@ -35,7 +35,7 @@ export const events: EventProps[] = [
   },
   {
     id: "8kz2f1tn2bq-8c73xvuocce-97thvw3fl04",
-    uniqueHumanReadableIdentifier: "event-002",
+    alias: "event-002",
     password: "event2024",
     title: "Music Festival",
     description: "A day filled with live music and performances.",

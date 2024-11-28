@@ -1,9 +1,9 @@
 export default function ConvitePage(
   props: Readonly<{
     params: {
-      uniqueHumanReadableIdentifier: string;
+      alias: string;
     };
   }>,
 ) {
-  return <div>{props.params.uniqueHumanReadableIdentifier}</div>;
+  return <div>{props.params.alias}</div>;
 }

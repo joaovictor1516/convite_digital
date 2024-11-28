@@ -45,7 +45,7 @@ export default function Eventos() {
               </Link>
 
               <Link
-                href={`/convite/${event.uniqueHumanReadableIdentifier}`}
+                href={`/convite/${event.alias}`}
                 className="button green"
               >
                 Convite
