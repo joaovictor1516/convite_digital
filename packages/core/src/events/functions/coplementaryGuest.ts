@@ -1,5 +1,5 @@
 import { GenerateId } from "../../shared";
-import { GuestProps, checkGuestInformations } from "../"
+import { GuestProps, checkGuestInformations } from "../";
 
 export function complementaryGuest(
   guestPartial: Partial<GuestProps>,

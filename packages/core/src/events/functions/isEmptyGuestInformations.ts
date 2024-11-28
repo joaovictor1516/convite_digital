@@ -11,8 +11,10 @@ export function checkGuestInformations(guest: Partial<GuestProps>): string[] {
     errorMessages.push("Adicione o e-mail do convidado.");
   }
 
-  if (guest.amountInvitesMade < 0){
-    errorMessages.push("O convidado não pode ter um valor menor que 0  de convites enviados.");
+  if (guest.amountInvitesMade < 0) {
+    errorMessages.push(
+      "O convidado não pode ter um valor menor que 0  de convites enviados.",
+    );
   }
 
   return errorMessages;

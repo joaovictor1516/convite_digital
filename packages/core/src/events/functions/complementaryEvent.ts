@@ -1,12 +1,6 @@
-import {
-  Password,
-  GenerateId
-} from "../../shared";
+import { Password, GenerateId } from "../../shared";
 
-import {
-  EventProps,
-  checkEventInformations,
-} from "../"
+import { EventProps, checkEventInformations } from "../";
 
 export function complementaryEvent(
   eventPartial: Partial<EventProps>,
