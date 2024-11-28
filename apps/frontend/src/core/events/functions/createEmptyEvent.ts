@@ -1,14 +1,14 @@
 import { EventProps } from "@/core";
-import {GenerateId} from "@/core";
+import { GenerateId } from "@/core";
 
-export function createEmptyEvent(): Partial<EventProps>{
-    return {
-        id: GenerateId.new(),
-        title: "",
-        date: "",
-        description: "",
-        localisation: "",
-        imageBackground: "",
-        imageMain: ""
-    };
+export function createEmptyEvent(): Partial<EventProps> {
+  return {
+    id: GenerateId.new(),
+    title: "",
+    date: "",
+    description: "",
+    localisation: "",
+    imageBackground: "",
+    imageMain: "",
+  };
 }

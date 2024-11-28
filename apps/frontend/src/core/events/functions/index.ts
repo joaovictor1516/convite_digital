@@ -6,10 +6,10 @@ import { createEmptyEvent } from "./createEmptyEvent";
 import { createEmptyGuest } from "./createEmptyGuest";
 
 export {
-    checkEventInformations, 
-    checkGuestInformations, 
-    complementaryEvent, 
-    complementaryGuest, 
-    createEmptyEvent,
-    createEmptyGuest
+  checkEventInformations,
+  checkGuestInformations,
+  complementaryEvent,
+  complementaryGuest,
+  createEmptyEvent,
+  createEmptyGuest,
 };

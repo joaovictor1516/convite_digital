@@ -1,3 +1,3 @@
-import { events } from "./events"
+import { events } from "./events";
 
-export { events }; 
+export { events };

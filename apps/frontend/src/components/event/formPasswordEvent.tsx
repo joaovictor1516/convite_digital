@@ -1,7 +1,3 @@
-export function FormPasswordEvent(){
-    return (
-        <span className="">
-            form
-        </span>
-    )
+export function FormPasswordEvent() {
+  return <span className="">form</span>;
 }
