@@ -1,5 +1,5 @@
 "use client";
-import { EventProps, events, GuestProps } from "@/core";
+import { EventProps, events, GuestProps } from "core";
 import { use, useEffect, useState } from "react";
 import { DashboardEvent } from "@/components/event/dashboardEvent";
 import { FormPasswordEvent } from "@/components/event/formPasswordEvent";

@@ -1,4 +1,4 @@
-import { EventProps } from "@/core";
+import { EventProps } from "core";
 import QRCode from "react-qr-code";
 
 export interface AccessViaQrCodeProps {

@@ -1,5 +1,5 @@
 import { Information } from "../shared/information";
-import { EventProps } from "@/core";
+import { EventProps } from "core";
 
 export interface EventInformationsProps {
   event: EventProps;

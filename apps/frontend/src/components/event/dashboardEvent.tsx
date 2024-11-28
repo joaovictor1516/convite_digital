@@ -1,7 +1,7 @@
 import { Statistic } from "../shared/statistic";
 import { AccessViaQrCode } from "./accessViaQrCode";
 import { EventInformations } from "./eventInformations";
-import { EventProps, GuestProps } from "@/core";
+import { EventProps, GuestProps } from "core";
 import { ListGuest } from "./listGuest";
 
 export interface DashboardEventProps {
