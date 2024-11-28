@@ -10,18 +10,18 @@ export interface AdminEventPageProps{
     }
 }
 
-export default function AdminEventPage(props: AdminEventPageProps){
-    const parameters: AdminEventPageProps = use(props.params);
+export default function AdminEventPage(props: Readonly<AdminEventPageProps>){
+    const parameters: {todos: [id: string, password: string]} = use(props.params);
     const id: string = parameters.todos[0];
     const [event, setEvent] = useState<EventProps | null>(null);
     const [password, setPassword] = useState<string | null>(parameters.todos[1] ?? null);
 
     const presents = event?.guests.filter((guest) => guest.isConfirmed) ?? [];
-    const absent = event?.guests.filter((guest) => !guest.isConfirmed) ?? [];
+    const absents = event?.guests.filter((guest) => !guest.isConfirmed) ?? [];
 
-    const totalGeneral = event?.guests.reduce((total: number, guest: GuestProps) => {
+    const totalGeneral = presents?.reduce((total: number, guest: GuestProps) => {
         return total + guest.amountInvitesMade + 1
-    }, 0)
+    }, 0) ?? 0;
 
     function loadEvent(){
         const event = events.find((ev) => ev.id === id && ev.password === password);
@@ -34,7 +34,11 @@ export default function AdminEventPage(props: AdminEventPageProps){
 
     return (
         <div className="flex flex-col justify-center items-center">
-            {event ? <DashboardEvent event={event}/> : <FormPasswordEvent/>}
+            {event ? ( <DashboardEvent 
+                        event={event} 
+                        presents={presents} 
+                        absents={absents} 
+                        totalGeneral={totalGeneral}/> ) : (<FormPasswordEvent/>)}
         </div>
     )
 }

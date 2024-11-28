@@ -27,7 +27,7 @@ export const events: EventProps[] = [
           email: "janesmith@example.com",
           isConfirmed: false,
           hasCompanion: true,
-          amountInvitesMade: null
+          amountInvitesMade: 0
         }
       ]
     },
