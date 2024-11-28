@@ -10,7 +10,7 @@ export const events: EventProps[] = [
     localisation: "New York, NY",
     date: new Date("2024-12-15T09:00:00.000Z"),
     imageBackground:
-      "https://play-lh.googleusercontent.com/mpBm6uxkAwCTaDL7us2iG0L-Lpxb6_vUYxJ5dBMSrKFGZoION2lUY5RkJYModzngyIk",
+      "https://images.prismic.io/vaultinum/0458a9f1-e149-4037-b9aa-aa4b4fb53c25_propriete-intellectuelle-code-source-protection-compressed.jpg?auto=compress,format&rect=0,0,2400,981&w=2400&h=981",
     imageMain:
       "https://images.prismic.io/vaultinum/0458a9f1-e149-4037-b9aa-aa4b4fb53c25_propriete-intellectuelle-code-source-protection-compressed.jpg?auto=compress,format&rect=0,0,2400,981&w=2400&h=981",
     publicExpected: 500,
@@ -21,14 +21,14 @@ export const events: EventProps[] = [
         email: "johndoe@example.com",
         isConfirmed: true,
         hasCompanion: false,
-        amountInvitesMade: 2,
+        amountInvitesMade: 0,
       },
       {
         id: "t48tb7zidml-gvxuk2zeuas-ofzhx6atil",
         name: "Jane Smith",
         email: "janesmith@example.com",
         isConfirmed: false,
-        hasCompanion: true,
+        hasCompanion: false,
         amountInvitesMade: 0,
       },
     ],
@@ -42,9 +42,9 @@ export const events: EventProps[] = [
     localisation: "Los Angeles, CA",
     date: new Date("2024-12-22T14:00:00.000Z"),
     imageBackground:
-      "https://blog.cronapp.io/wp-content/uploads/2020/09/javascript-1.jpg",
+      "https://www.frontendmag.com/wp-content/uploads/2023/01/easiest-front-end-framework.jpeg",
     imageMain:
-      "https://www.datocms-assets.com/48401/1628644950-javascript.png?auto=format&fit=max&w=1200",
+      "https://www.simplilearn.com/ice9/free_resources_article_thumb/recact_angular_vue.jpg",
     publicExpected: 2000,
     guests: [
       {
