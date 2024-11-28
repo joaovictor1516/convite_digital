@@ -2,7 +2,7 @@ import { EventProps } from "../events";
 
 export const events: EventProps[] = [
   {
-    id: "hu9axkpth5c-jaqh97nmmt-k7g6tszaum",
+    id: "21ff36d7-8fa7-495e-9339-d1687458b660",
     alias: "event-001",
     password: "securePassword123",
     title: "Tech Conference 2024",
@@ -16,7 +16,7 @@ export const events: EventProps[] = [
     publicExpected: 500,
     guests: [
       {
-        id: "0xw2qmjrnq5-nazymg2psd-58n41qlanh5",
+        id: "9db594ba-2015-4126-923b-9453d7edd552",
         name: "John Doe",
         email: "johndoe@example.com",
         isConfirmed: true,
@@ -24,7 +24,7 @@ export const events: EventProps[] = [
         amountInvitesMade: 0,
       },
       {
-        id: "t48tb7zidml-gvxuk2zeuas-ofzhx6atil",
+        id: "7f76598d-5025-45d7-950a-45dbc52307ab",
         name: "Jane Smith",
         email: "janesmith@example.com",
         isConfirmed: false,
@@ -34,7 +34,7 @@ export const events: EventProps[] = [
     ],
   },
   {
-    id: "8kz2f1tn2bq-8c73xvuocce-97thvw3fl04",
+        id: "be33b1e3-6d44-45d3-80dc-c9a4b61e389a",
     alias: "event-002",
     password: "event2024",
     title: "Music Festival",
@@ -48,7 +48,7 @@ export const events: EventProps[] = [
     publicExpected: 2000,
     guests: [
       {
-        id: "7r5hi7k6t4a-yuobp2bkw8-q2678xhj3ek",
+    id: "f4b18eb7-13c6-4bde-aa26-a9551a5c31f2",
         name: "Alice Cooper",
         email: "alicecooper@example.com",
         isConfirmed: true,
@@ -56,7 +56,7 @@ export const events: EventProps[] = [
         amountInvitesMade: 5,
       },
       {
-        id: "brv7efplynq-2muy1woua3h-nlq5ulok95e",
+        id: "ce7781f9-ce90-480b-b33f-79551b436b30",
         name: "Bob Marley",
         email: "bobmarley@example.com",
         isConfirmed: false,
