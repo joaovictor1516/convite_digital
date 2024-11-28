@@ -12,7 +12,7 @@ export function PageTemplate(props: Readonly<PageTemplateProps>){
             <header>
                 <LogoTemplate/>
             </header>
-            <main className={props.className}>
+            <main className={`flex-1 flex-col justify-center py-10 container ${props.className}`}>
                 {props.children}
             </main>
         </div>
