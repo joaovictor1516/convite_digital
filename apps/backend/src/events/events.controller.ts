@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from "@nestjs/common";
+import { Body, Controller, Get, Param, Post } from "@nestjs/common";
 import { DateEvent, EventProps, events, GenerateId } from "core";
 
 @Controller("events")
@@ -21,10 +21,25 @@ export class EventsController {
     }
   }
 
+  @Post("access")
+  async accessEvent(@Body() data: { id: string; password: string }) {
+    const event = events.find(
+      (event) => event.id === data.id && event.password === data.password,
+    );
+
+    return this.serialize(event);
+  }
+
   @Get("validate/:alias/:id")
   async validateAlias(@Param("alias") alias: string, @Param("id") id: string) {
     const event = events.find((event: EventProps) => event.alias === alias);
-    return { valid: !event || event.id === id };
+    if (event && event.id === id) {
+      return "the alias is already in use and the id is the same";
+    } else if (!event) {
+      return "the event alias is not in use";
+    } else {
+      return "the alias is already in use but the id is not the same";
+    }
   }
 
   private serialize(event: EventProps) {
