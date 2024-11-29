@@ -30,18 +30,18 @@ export class EventsController {
     return this.serialize(event);
   }
 
-  @Post("saveGuest")
-  async saveGuest(@Body() data: { id: string; guest: GuestProps }) {
-    const event = events.find((event) => event.id === data.id);
+  @Post(":alias/guests")
+  async saveGuest(@Param("alias") alias: string, @Body() newGuest: GuestProps) {
+    const event = events.find((event) => event.alias === alias);
 
     if (!event) {
       return this.serialize(event);
     }
 
-    const guest = event.guests.find((guest) => guest.id === data.guest.id);
+    const guest = event.guests.find((guest) => guest.id === newGuest.id);
 
     if (!guest) {
-      event.guests.push(data.guest);
+      event.guests.push(newGuest);
       return this.serialize(event);
     } else {
       return "guest already exists";
