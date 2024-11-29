@@ -1,5 +1,12 @@
 import { Body, Controller, Get, Param, Post } from "@nestjs/common";
-import { DateEvent, EventProps, events, GenerateId, GuestProps } from "core";
+import {
+  complementaryGuest,
+  DateEvent,
+  EventProps,
+  events,
+  GenerateId,
+  GuestProps,
+} from "core";
 
 @Controller("events")
 export class EventsController {
@@ -38,10 +45,14 @@ export class EventsController {
       return this.serialize(event);
     }
 
-    const guest = event.guests.find((guest) => guest.id === newGuest.id);
+    const complementaryNewGuest = complementaryGuest(newGuest);
+
+    const guest = event.guests.find(
+      (guest) => guest.id === complementaryNewGuest.id,
+    );
 
     if (!guest) {
-      event.guests.push(newGuest);
+      event.guests.push(complementaryNewGuest);
       return this.serialize(event);
     } else {
       return "guest already exists";
