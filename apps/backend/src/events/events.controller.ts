@@ -50,10 +50,12 @@ export class EventsController {
 
   @Post()
   async saveEvent(@Body() newEvent: EventProps) {
-    const event = events.find((event) => event.id === newEvent.id);
+    const event = events.find((event) => event.alias === newEvent.alias);
 
-    if (event) {
-      return this.serialize(event);
+    if (event && event.id !== newEvent.id) {
+      return "event alias already exists";
+    } else if (event && event.id === newEvent.id) {
+      return "event already exists";
     }
 
     events.push(newEvent);
