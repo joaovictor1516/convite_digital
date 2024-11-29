@@ -30,7 +30,7 @@ export class EventsController {
     return this.serialize(event);
   }
 
-  @Post(":alias/guests")
+  @Post(":alias/guest")
   async saveGuest(@Param("alias") alias: string, @Body() newGuest: GuestProps) {
     const event = events.find((event) => event.alias === alias);
 
