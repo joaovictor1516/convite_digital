@@ -48,6 +48,18 @@ export class EventsController {
     }
   }
 
+  @Post()
+  async saveEvent(@Body() newEvent: EventProps) {
+    const event = events.find((event) => event.id === newEvent.id);
+
+    if (event) {
+      return this.serialize(event);
+    }
+
+    events.push(newEvent);
+    return this.serialize(newEvent);
+  }
+
   @Get("validate/:alias/:id")
   async validateAlias(@Param("alias") alias: string, @Param("id") id: string) {
     const event = events.find((event: EventProps) => event.alias === alias);
