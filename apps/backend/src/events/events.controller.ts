@@ -34,11 +34,13 @@ export class EventsController {
   async saveGuest(@Body() data: { id: string; guest: GuestProps }) {
     const event = events.find((event) => event.id === data.id);
 
+    if (!event) {
+      return this.serialize(event);
+    }
+
     const guest = event.guests.find((guest) => guest.id === data.guest.id);
 
-    if (!this.serialize(event)) {
-      return this.serialize(event);
-    } else if (!guest) {
+    if (!guest) {
       event.guests.push(data.guest);
       return this.serialize(event);
     } else {
