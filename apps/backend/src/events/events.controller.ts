@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Param, Post } from "@nestjs/common";
-import { DateEvent, EventProps, events, GenerateId } from "core";
+import { DateEvent, EventProps, events, GenerateId, GuestProps } from "core";
 
 @Controller("events")
 export class EventsController {
@@ -28,6 +28,22 @@ export class EventsController {
     );
 
     return this.serialize(event);
+  }
+
+  @Post("saveGuest")
+  async saveGuest(@Body() data: { id: string; guest: GuestProps }) {
+    const event = events.find((event) => event.id === data.id);
+
+    const guest = event.guests.find((guest) => guest.id === data.guest.id);
+
+    if (!this.serialize(event)) {
+      return this.serialize(event);
+    } else if (!guest) {
+      event.guests.push(data.guest);
+      return this.serialize(event);
+    } else {
+      return "guest already exists";
+    }
   }
 
   @Get("validate/:alias/:id")
