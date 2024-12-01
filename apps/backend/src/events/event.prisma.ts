@@ -24,4 +24,16 @@ export class EventPrisma {
       },
     });
   }
+
+  async searchAllEvents(): Promise<EventProps[]> {
+    return this.prisma.event.findMany() as any;
+  }
+
+  async searchEventById(id: string): Promise<EventProps> {
+    return this.prisma.event.findUnique({
+      where: {
+        id: id,
+      },
+    }) as any;
+  }
 }
