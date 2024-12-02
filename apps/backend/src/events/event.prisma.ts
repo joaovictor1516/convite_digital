@@ -1,4 +1,4 @@
-import { PrismaProvider } from "src/db/prismaProvider";
+import { PrismaProvider } from "src/db/prisma.provider";
 import { Injectable } from "@nestjs/common";
 import { EventProps, GuestProps } from "core";
 
@@ -31,8 +31,36 @@ export class EventPrisma {
 
   async searchEventById(id: string): Promise<EventProps> {
     return this.prisma.event.findUnique({
+      select: {
+        id: true,
+        alias: true,
+        title: true,
+        description: true,
+        date: true,
+        localisation: true,
+        guests: true,
+        publicExpected: true,
+      },
       where: {
         id: id,
+      },
+    }) as any;
+  }
+
+  async searchEventByAlias(alias: string): Promise<EventProps> {
+    return this.prisma.event.findUnique({
+      select: {
+        id: true,
+        alias: true,
+        title: true,
+        description: true,
+        date: true,
+        localisation: true,
+        guests: true,
+        publicExpected: true,
+      },
+      where: {
+        alias: alias,
       },
     }) as any;
   }
