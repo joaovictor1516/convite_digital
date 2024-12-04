@@ -7,25 +7,29 @@ import {
   GenerateId,
   GuestProps,
 } from "core";
+import { EventPrisma } from "./event.prisma";
 
 @Controller("events")
 export class EventsController {
+  constructor(readonly eventPrisma: EventPrisma) {}
+
   @Get()
   async findEvents() {
+    const events = await this.eventPrisma.searchAllEvents();
     return events.map(this.deserialize);
   }
 
   @Get(":idOrAlias")
   async findEvent(@Param("idOrAlias") idOrAlias: string) {
+    let event: EventProps;
+
     if (GenerateId.validate(idOrAlias)) {
-      return this.serialize(
-        events.find((event: EventProps) => event.id === idOrAlias),
-      );
+      event = await this.eventPrisma.searchEventById(idOrAlias);
     } else {
-      return this.serialize(
-        events.find((event: EventProps) => event.alias === idOrAlias),
-      );
+      event = await this.eventPrisma.searchEventByAlias(idOrAlias);
     }
+
+    return this.serialize(event);
   }
 
   @Post("access")
