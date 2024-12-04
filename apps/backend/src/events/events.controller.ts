@@ -16,7 +16,7 @@ export class EventsController {
   @Get()
   async findEvents() {
     const events = await this.eventPrisma.searchAllEvents();
-    return events.map(this.deserialize);
+    return events.map(this.serialize);
   }
 
   @Get(":idOrAlias")
