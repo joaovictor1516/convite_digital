@@ -26,7 +26,7 @@ export class EventPrisma {
   }
 
   async searchAllEvents(): Promise<EventProps[]> {
-    return this.prisma.event.findMany() as any;
+    return this.prisma.event.findMany() as unknown as EventProps[];
   }
 
   async searchEventById(id: string): Promise<EventProps> {
@@ -44,7 +44,7 @@ export class EventPrisma {
       where: {
         id: id,
       },
-    }) as any;
+    }) as unknown as EventProps;
   }
 
   async searchEventByAlias(alias: string): Promise<EventProps> {
@@ -62,6 +62,6 @@ export class EventPrisma {
       where: {
         alias: alias,
       },
-    }) as any;
+    }) as unknown as EventProps;
   }
 }
