@@ -83,8 +83,8 @@
     },
     {
       "type": "text",
-      "version": 570,
-      "versionNonce": 1630747545,
+      "version": 571,
+      "versionNonce": 824191783,
       "isDeleted": false,
       "id": "ZJmTAd1VOl71F6X-cirAn",
       "fillStyle": "solid",
@@ -104,7 +104,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1734962379657,
+      "updated": 1735579419849,
       "link": null,
       "locked": false,
       "fontSize": 34.044534708625456,
@@ -379,8 +379,8 @@
     },
     {
       "type": "text",
-      "version": 791,
-      "versionNonce": 1801627255,
+      "version": 792,
+      "versionNonce": 279494345,
       "isDeleted": false,
       "id": "-3S6BEVWwzCcoUcwI9IjD",
       "fillStyle": "solid",
@@ -409,7 +409,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1734962379659,
+      "updated": 1735579419851,
       "link": null,
       "locked": false,
       "fontSize": 18.99245951331295,
@@ -476,8 +476,8 @@
     },
     {
       "type": "text",
-      "version": 879,
-      "versionNonce": 1851416697,
+      "version": 880,
+      "versionNonce": 979250759,
       "isDeleted": false,
       "id": "bArYrLk9ZSf_vnRFGiEL8",
       "fillStyle": "solid",
@@ -497,7 +497,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1734962379660,
+      "updated": 1735579419851,
       "link": null,
       "locked": false,
       "fontSize": 18.99245951331295,
@@ -568,8 +568,8 @@
     },
     {
       "type": "text",
-      "version": 678,
-      "versionNonce": 55885719,
+      "version": 679,
+      "versionNonce": 1150811561,
       "isDeleted": false,
       "id": "QPSYokVCp05SQQZ7SgzZh",
       "fillStyle": "solid",
@@ -589,7 +589,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1734962379661,
+      "updated": 1735579419852,
       "link": null,
       "locked": false,
       "fontSize": 22.629605509406698,
@@ -836,8 +836,8 @@
     },
     {
       "type": "text",
-      "version": 778,
-      "versionNonce": 420079961,
+      "version": 779,
+      "versionNonce": 1865338215,
       "isDeleted": false,
       "id": "1VgQbicgO8Vt62ilkty4g",
       "fillStyle": "solid",
@@ -857,7 +857,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1734962379661,
+      "updated": 1735579419853,
       "link": null,
       "locked": false,
       "fontSize": 22.629605509406698,
@@ -872,8 +872,8 @@
     },
     {
       "type": "text",
-      "version": 951,
-      "versionNonce": 1139193015,
+      "version": 952,
+      "versionNonce": 2046582921,
       "isDeleted": false,
       "id": "kTXpi2kKiW9R1L8l5sklF",
       "fillStyle": "solid",
@@ -893,7 +893,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1734962379662,
+      "updated": 1735579419853,
       "link": null,
       "locked": false,
       "fontSize": 18.99245951331295,
@@ -908,8 +908,8 @@
     },
     {
       "type": "text",
-      "version": 800,
-      "versionNonce": 1519736377,
+      "version": 801,
+      "versionNonce": 2061404295,
       "isDeleted": false,
       "id": "zvXPfZihtFYQW7HwPk-rr",
       "fillStyle": "solid",
@@ -929,7 +929,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1734962379664,
+      "updated": 1735579419854,
       "link": null,
       "locked": false,
       "fontSize": 17.5657784569758,
@@ -1120,8 +1120,8 @@
     },
     {
       "type": "text",
-      "version": 146,
-      "versionNonce": 1153238487,
+      "version": 147,
+      "versionNonce": 244410217,
       "isDeleted": false,
       "id": "RujyNeXpOLkkDSIQ_ngeJ",
       "fillStyle": "solid",
@@ -1146,7 +1146,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1734962379665,
+      "updated": 1735579419856,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1161,8 +1161,8 @@
     },
     {
       "type": "text",
-      "version": 876,
-      "versionNonce": 903882521,
+      "version": 877,
+      "versionNonce": 1797906343,
       "isDeleted": false,
       "id": "ZLwb_xYN7-2axrxU5yVyN",
       "fillStyle": "solid",
@@ -1182,7 +1182,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1734962379666,
+      "updated": 1735579419857,
       "link": null,
       "locked": false,
       "fontSize": 17.5657784569758,
@@ -1614,8 +1614,8 @@
     },
     {
       "type": "ellipse",
-      "version": 180,
-      "versionNonce": 1309378149,
+      "version": 181,
+      "versionNonce": 2039463303,
       "isDeleted": false,
       "id": "Kgfp0wdHrikbULFTw0Ha8",
       "fillStyle": "solid",
@@ -1640,9 +1640,13 @@
         {
           "id": "iT6yR3iSFuiXm9mgTLOG_",
           "type": "arrow"
+        },
+        {
+          "id": "jwSikLxgfqP1rpSsrRyYo",
+          "type": "arrow"
         }
       ],
-      "updated": 1732899856301,
+      "updated": 1735579600739,
       "link": null,
       "locked": false
     },
@@ -1942,8 +1946,8 @@
     },
     {
       "type": "text",
-      "version": 632,
-      "versionNonce": 1563668151,
+      "version": 633,
+      "versionNonce": 480416329,
       "isDeleted": false,
       "id": "HF46R1JxMsc2ayfeSqwKZ",
       "fillStyle": "solid",
@@ -1968,7 +1972,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1734966879949,
+      "updated": 1735579419858,
       "link": null,
       "locked": false,
       "fontSize": 17.92205218152034,
@@ -1980,6 +1984,103 @@
       "originalText": "Providers, conexão entre os core e as interfaces da aplicação",
       "lineHeight": 1.25,
       "baseline": 16
+    },
+    {
+      "type": "arrow",
+      "version": 590,
+      "versionNonce": 1609898279,
+      "isDeleted": false,
+      "id": "jwSikLxgfqP1rpSsrRyYo",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": 268.589892583126,
+      "y": 567.3062549106739,
+      "strokeColor": "#ffffff",
+      "backgroundColor": "transparent",
+      "width": 225.11882558922144,
+      "height": 72.31481424126662,
+      "seed": 643337225,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "boundElements": [],
+      "updated": 1735579707135,
+      "link": null,
+      "locked": false,
+      "startBinding": {
+        "elementId": "GvL3MtVXEDPTuMlCXVTLn",
+        "focus": 0.18413591695409223,
+        "gap": 6.623879412859651
+      },
+      "endBinding": {
+        "elementId": "Kgfp0wdHrikbULFTw0Ha8",
+        "focus": -0.4041919427673337,
+        "gap": 15.922048785443508
+      },
+      "lastCommittedPoint": null,
+      "startArrowhead": null,
+      "endArrowhead": "arrow",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          85.8479286776006,
+          -68.2002359941963
+        ],
+        [
+          225.11882558922144,
+          -72.31481424126662
+        ]
+      ]
+    },
+    {
+      "type": "text",
+      "version": 822,
+      "versionNonce": 1257435655,
+      "isDeleted": false,
+      "id": "GvL3MtVXEDPTuMlCXVTLn",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -135.9226227532921,
+      "y": 573.9301343235336,
+      "strokeColor": "#ffffff",
+      "backgroundColor": "transparent",
+      "width": 612.738037109375,
+      "height": 44.80513045380085,
+      "seed": 1774802985,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "boundElements": [
+        {
+          "id": "jwSikLxgfqP1rpSsrRyYo",
+          "type": "arrow"
+        }
+      ],
+      "updated": 1735579707134,
+      "link": null,
+      "locked": false,
+      "fontSize": 17.92205218152034,
+      "fontFamily": 1,
+      "text": "Criação de funções API's responsáveis pela união dos cores com as \ninterfaces da apicação.",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Criação de funções API's responsáveis pela união dos cores com as \ninterfaces da apicação.",
+      "lineHeight": 1.25,
+      "baseline": 38
     }
   ],
   "appState": {
