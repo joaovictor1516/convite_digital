@@ -34,8 +34,11 @@ export class EventsController {
 
   @Post("access")
   async accessEvent(@Body() data: { id: string; password: string }) {
+    const { id, password } = data;
+
     const event = events.find(
-      (event) => event.id === data.id && event.password === data.password,
+      // eslint-disable-next-line prettier/prettier
+      (event) => event.id === id && event.password === password
     );
 
     return this.serialize(event);
