@@ -12,10 +12,17 @@ export function complementaryEvent(
   }
 
   const event: EventProps = {
-    ...eventPartial,
     id: eventPartial.id ?? GenerateId.new(),
     password: eventPartial.password ?? Password.new(),
-    publicExpected: +(eventPartial.publicExpected ?? 1),
+    title: eventPartial.title,
+    alias: eventPartial.alias ?? eventPartial.title.toLowerCase().replace(/\s/g, "-"),
+    date: eventPartial.date ?? new Date(),
+    description: eventPartial.description,
+    imageBackground: eventPartial.imageBackground,
+    imageMain: eventPartial.imageMain,
+    localisation: eventPartial.localisation,
+    publicExpected: eventPartial.publicExpected,
+    guests: eventPartial.guests ?? [],
   } as EventProps;
 
   return event;
