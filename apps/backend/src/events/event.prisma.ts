@@ -7,14 +7,33 @@ export class EventPrisma {
   constructor(readonly prisma: PrismaProvider) {}
   saveEvent(event: EventProps) {
     return this.prisma.event.create({
-      data: event as any,
+      data: {
+        id: event.id,
+        password: event.password,
+        title: event.title,
+        alias: event.alias,
+        description: event.description,
+        localisation: event.localisation,
+        date: event.date,
+        imageBackground: event.imageBackground,
+        imageMain: event.imageMain,
+        publicExpected: event.publicExpected,
+        guests: {
+          create: event.guests,
+        },
+      },
     });
   }
 
   saveGuest(event: EventProps, guest: GuestProps) {
+    console.log(guest);
     return this.prisma.guest.create({
       data: {
-        ...guest,
+        id: guest.id,
+        name: guest.name,
+        email: guest.email,
+        isConfirmed: guest.isConfirmed,
+        hasCompanion: guest.hasCompanion,
         amountInvitesMade: +(guest.amountInvitesMade || 0),
         event: {
           connect: {
