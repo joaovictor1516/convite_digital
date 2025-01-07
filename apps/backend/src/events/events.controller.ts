@@ -1,9 +1,9 @@
 import { Body, Controller, Get, Param, Post } from "@nestjs/common";
 import {
+  complementaryEvent,
   complementaryGuest,
   DateEvent,
   EventProps,
-  events,
   GenerateId,
   GuestProps,
 } from "core";
@@ -36,6 +36,8 @@ export class EventsController {
   async accessEvent(@Body() data: { id: string; password: string }) {
     const { id, password } = data;
 
+    const events = await this.eventPrisma.searchAllEvents();
+
     const event = events.find(
       // eslint-disable-next-line prettier/prettier
       (event) => event.id === id && event.password === password
@@ -45,8 +47,11 @@ export class EventsController {
   }
 
   @Post(":alias/guest")
-  async saveGuest(@Param("alias") alias: string, @Body() newGuest: GuestProps) {
-    const event = events.find((event) => event.alias === alias);
+  async saveGuest(
+    @Param("alias") alias: string,
+    @Body() newGuest: Partial<GuestProps>,
+  ) {
+    const event = await this.eventPrisma.searchEventByAlias(alias);
 
     if (!event) {
       return this.serialize(event);
@@ -54,35 +59,33 @@ export class EventsController {
 
     const complementaryNewGuest = complementaryGuest(newGuest);
 
-    const guest = event.guests.find(
-      (guest) => guest.id === complementaryNewGuest.id,
+    console.log(
+      "complementaryNewGuest:",
+      complementaryNewGuest,
+      "newGuest:",
+      newGuest,
     );
 
-    if (!guest) {
-      event.guests.push(complementaryNewGuest);
-      return this.serialize(event);
-    } else {
-      return "guest already exists";
-    }
+    await this.eventPrisma.saveGuest(event, complementaryNewGuest);
   }
 
   @Post()
-  async saveEvent(@Body() newEvent: EventProps) {
-    const event = events.find((event) => event.alias === newEvent.alias);
+  async saveEvent(@Body() newEvent: Partial<EventProps>) {
+    const event = await this.eventPrisma.searchEventByAlias(newEvent.alias);
 
-    if (event && event.id !== newEvent.id) {
+    if (event) {
       return "event alias already exists";
-    } else if (event && event.id === newEvent.id) {
-      return "event already exists";
     }
 
-    events.push(newEvent);
-    return this.serialize(newEvent);
+    const complementaryNewEvent = complementaryEvent(newEvent);
+
+    await this.eventPrisma.saveEvent(complementaryNewEvent);
+    return this.deserialize(complementaryNewEvent);
   }
 
   @Get("validate/:alias/:id")
   async validateAlias(@Param("alias") alias: string, @Param("id") id: string) {
-    const event = events.find((event: EventProps) => event.alias === alias);
+    const event = await this.eventPrisma.searchEventByAlias(alias);
     if (event && event.id === id) {
       return "the alias is already in use and the id is the same";
     } else if (!event) {
