@@ -12,17 +12,20 @@ export function complementaryGuest(
 
   const amountInvitesMade = guestPartial.amountInvitesMade ?? 0;
 
+  const hasId = guestPartial.id !== undefined;
+
   const hasCompanion =
     guestPartial.isConfirmed &&
     guestPartial.hasCompanion &&
     amountInvitesMade > 0;
 
-  const guest: GuestProps = {
-    ...guestPartial,
-    id: guestPartial.id ?? GenerateId.new(),
-    isConfirmed: hasCompanion ?? false,
-    hasCompanion: hasCompanion ?? false,
-    amountInvitesMade: hasCompanion ? guestPartial.amountInvitesMade : 0,
+  const guest = {
+    id: hasId ? guestPartial.id : GenerateId.new(),
+    name: guestPartial.name,
+    email: guestPartial.email,
+    isConfirmed: hasCompanion,
+    hasCompanion: hasCompanion,
+    amountInvitesMade: amountInvitesMade,
   } as GuestProps;
 
   return guest;
