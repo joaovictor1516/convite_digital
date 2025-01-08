@@ -36,12 +36,15 @@ export class EventsController {
   async accessEvent(@Body() data: { id: string; password: string }) {
     const { id, password } = data;
 
-    const events = await this.eventPrisma.searchAllEvents();
+    const event = await this.eventPrisma.searchEventById(id);
 
-    const event = events.find(
-      // eslint-disable-next-line prettier/prettier
-      (event) => event.id === id && event.password === password
-    );
+    console.log(event);
+
+    if (!event) {
+      throw new Error("event not found");
+    } else if (event.password != password) {
+      throw new Error("wrong password");
+    }
 
     return this.serialize(event);
   }
@@ -54,12 +57,13 @@ export class EventsController {
     const event = await this.eventPrisma.searchEventByAlias(alias);
 
     if (!event) {
-      return this.serialize(event);
+      throw new Error("event not found");
     }
 
     const complementaryNewGuest = complementaryGuest(newGuest);
 
     await this.eventPrisma.saveGuest(event, complementaryNewGuest);
+    return "Guest saved";
   }
 
   @Post()
@@ -73,7 +77,7 @@ export class EventsController {
     const complementaryNewEvent = complementaryEvent(newEvent);
 
     await this.eventPrisma.saveEvent(complementaryNewEvent);
-    return this.deserialize(complementaryNewEvent);
+    return this.deserialize(complementaryNewEvent), "Event saved";
   }
 
   @Get("validate/:alias/:id")
