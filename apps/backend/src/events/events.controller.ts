@@ -1,4 +1,11 @@
-import { Body, Controller, Get, Param, Post } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  Get,
+  HttpException,
+  Param,
+  Post,
+} from "@nestjs/common";
 import {
   complementaryEvent,
   complementaryGuest,
@@ -38,12 +45,10 @@ export class EventsController {
 
     const event = await this.eventPrisma.searchEventById(id);
 
-    console.log(event);
-
     if (!event) {
-      throw new Error("event not found");
+      throw new HttpException("event not found", 400);
     } else if (event.password !== password) {
-      throw new Error("wrong password");
+      throw new HttpException("wrong password", 400);
     }
 
     return this.serialize(event);
@@ -57,7 +62,7 @@ export class EventsController {
     const event = await this.eventPrisma.searchEventByAlias(alias);
 
     if (!event) {
-      throw new Error("event not found");
+      throw new HttpException("event not found", 400);
     }
 
     const complementaryNewGuest = complementaryGuest(newGuest);
@@ -71,7 +76,7 @@ export class EventsController {
     const event = await this.eventPrisma.searchEventByAlias(newEvent.alias);
 
     if (event) {
-      return "event alias already exists";
+      throw new HttpException("event alias already exists", 400);
     }
 
     const complementaryNewEvent = complementaryEvent(newEvent);
@@ -83,13 +88,8 @@ export class EventsController {
   @Get("validate/:alias/:id")
   async validateAlias(@Param("alias") alias: string, @Param("id") id: string) {
     const event = await this.eventPrisma.searchEventByAlias(alias);
-    if (event && event.id === id) {
-      return "the alias is already in use and the id is the same";
-    } else if (!event) {
-      return "the event alias is not in use";
-    } else {
-      return "the alias is already in use but the id is not the same";
-    }
+
+    return { isValid: !event || event.id === id };
   }
 
   private serialize(event: EventProps) {
