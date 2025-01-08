@@ -51,13 +51,16 @@ export class EventPrisma {
     return this.prisma.event.findUnique({
       select: {
         id: true,
+        password: true,
         alias: true,
         title: true,
         description: true,
         date: true,
         localisation: true,
-        guests: true,
+        imageMain: true,
+        imageBackground: true,
         publicExpected: true,
+        guests: true,
       },
       where: {
         id: id,
@@ -69,13 +72,16 @@ export class EventPrisma {
     return this.prisma.event.findUnique({
       select: {
         id: true,
+        password: true,
         alias: true,
         title: true,
         description: true,
         date: true,
         localisation: true,
-        guests: true,
+        imageMain: true,
+        imageBackground: true,
         publicExpected: true,
+        guests: true,
       },
       where: {
         alias: alias,
