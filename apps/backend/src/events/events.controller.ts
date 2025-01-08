@@ -42,7 +42,7 @@ export class EventsController {
 
     if (!event) {
       throw new Error("event not found");
-    } else if (event.password != password) {
+    } else if (event.password !== password) {
       throw new Error("wrong password");
     }
 
@@ -95,18 +95,22 @@ export class EventsController {
   private serialize(event: EventProps) {
     if (!event) return "event not found";
 
-    return {
-      ...event,
-      date: DateEvent.format(event.date),
-    };
+    if (event.date instanceof Date) {
+      return {
+        ...event,
+        date: DateEvent.format(event.date),
+      };
+    }
   }
 
-  private deserialize(event: any) {
+  private deserialize(event: EventProps) {
     if (!event) return "event not found";
 
-    return {
-      ...event,
-      date: DateEvent.unformat(event.date),
-    } as EventProps[];
+    if (typeof event.date === "string") {
+      return {
+        ...event,
+        date: DateEvent.unformat(event.date),
+      };
+    }
   }
 }
