@@ -7,7 +7,7 @@ export interface EventProps {
   title: string;
   description: string;
   localisation: string;
-  date: Date;
+  date: Date | string;
   imageBackground: string;
   imageMain: string;
   publicExpected: number;
