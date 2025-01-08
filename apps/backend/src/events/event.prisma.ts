@@ -26,7 +26,6 @@ export class EventPrisma {
   }
 
   saveGuest(event: EventProps, guest: GuestProps) {
-    console.log(guest);
     return this.prisma.guest.create({
       data: {
         id: guest.id,

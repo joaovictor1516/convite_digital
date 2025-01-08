@@ -59,13 +59,6 @@ export class EventsController {
 
     const complementaryNewGuest = complementaryGuest(newGuest);
 
-    console.log(
-      "complementaryNewGuest:",
-      complementaryNewGuest,
-      "newGuest:",
-      newGuest,
-    );
-
     await this.eventPrisma.saveGuest(event, complementaryNewGuest);
   }
 
